@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> CRUD</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-mynav">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand">EMPLOYEE MANAGEMENT SYSTEM</a> -->
+      <marquee class="mar"><h1>EMPLOYEE MANAGEMENT SYSTEM</marquee>
+    </div>
+  </nav>
+
+  <div class="me-auto p-2 bd-highlight"><h2> EMPLOYEE LIST</div>
+
+<div class="form">
+    <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+    <input type="text" id="name" placeholder="Name">
+    <input type="date" id="date" placeholder="DATE">
+    <input type="submit" value="Add" class="btn btn-primary">
+    </form>
+    
+    <p id="counter"></p>
+
+    <table class="table table-bordered table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">NAME</th>
+          <th scope="col">DATE</th>
+          <th scope="col">ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody id="tasks"></tbody>
+    </table>
+
+
+</div>
+
+<div id="edit-box" role="aria-hidden">
+    <form action="javascript:void(0);" method="POST" id="save-edit">
+      <input type="text" id="edit-todo">
+      <input type="date" id="edit-todo2">
+      <input type="submit" value="Save" class="btn btn-success"/> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+    </form>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
